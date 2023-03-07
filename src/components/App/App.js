@@ -26,10 +26,8 @@ export class App extends Component {
   submitLink = (inputs) => {
     postURL(inputs)
     .then(feedback => {
-      console.log(feedback)
       getUrls()
       .then(data => {
-        console.log(data)
         this.setState({ urls: data.urls })
       })
       .catch(error => {
@@ -46,7 +44,7 @@ export class App extends Component {
       <main className="App">
         <header>
           <h1>URL Shortener</h1>
-          <UrlForm />
+          <UrlForm submitLink={this.submitLink} />
         </header>
 
         <UrlContainer urls={this.state.urls} key={'urls'}/>
