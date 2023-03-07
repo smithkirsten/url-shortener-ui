@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getUrls } from '../../apiCalls';
+import { getUrls, postURL } from '../../apiCalls';
 import UrlContainer from '../UrlContainer/UrlContainer';
 import UrlForm from '../UrlForm/UrlForm';
 
@@ -21,6 +21,24 @@ export class App extends Component {
       .catch(error => {
         console.log(error)
       })
+  }
+
+  submitLink = (inputs) => {
+    postURL(inputs)
+    .then(feedback => {
+      console.log(feedback)
+      getUrls()
+      .then(data => {
+        console.log(data)
+        this.setState({ urls: data.urls })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
   render() {
