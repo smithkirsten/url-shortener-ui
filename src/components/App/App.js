@@ -26,14 +26,8 @@ export class App extends Component {
   submitLink = (inputs) => {
     postURL(inputs)
     .then(feedback => {
-      getUrls()
-      .then(data => {
-        this.setState({ urls: data.urls })
+        this.setState({ urls: [...this.state.urls, feedback] })
       })
-      .catch(error => {
-        console.log(error)
-      })
-    })
     .catch(error => {
       console.log(error)
     })
