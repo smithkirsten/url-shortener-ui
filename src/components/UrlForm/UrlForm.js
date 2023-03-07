@@ -16,6 +16,8 @@ class UrlForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log('submitting: ', this.state)
+    this.props.submitLink(this.state)
     this.clearInputs();
   }
 
