@@ -49,7 +49,7 @@ export class App extends Component {
           <UrlForm />
         </header>
 
-        <UrlContainer urls={this.state.urls}/>
+        <UrlContainer urls={this.state.urls} key={'urls'}/>
       </main>
     );
   }
