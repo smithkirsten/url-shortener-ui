@@ -1,0 +1,14 @@
+{"urls": [
+  { 
+    "title": "snails", 
+    "long_url": "https://www.animal-ethics.org/wp-content/uploads/snails-and-bivalves.jpg", 
+    "short_url": "http://localhost/shorter-snails",
+    "id": 1 
+    }, 
+    { "title": "Just one snail", 
+    "long_url": "https://assets.answersingenesis.org/img/cms/content/contentnode/og_image/snails-slugs-and-semi-slugs.jpg",
+    "short_url": "http://localhost/smaller-snail",
+    "id": 2
+    } 
+  ]
+}
